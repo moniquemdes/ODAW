@@ -1,0 +1,154 @@
+<!--1-Faça um formulário com 3 campos de texto, alterar para letras maiúsculas e minúsculas através de checkbox. Ver exemplo 6 -->
+
+<HTML>
+    <HEAD>
+      <TITLE> Introdução ao Javascript </TITLE>
+    </HEAD>
+   
+   <BODY>
+       
+   <H1> Exemplos para a Aula de Javascript </H1>	
+   
+
+   <SCRIPT> 
+
+    function AltMaiusc () { 
+        document.TCheck.Muda1.value = document.TCheck.Muda1.value.toUpperCase()  
+        document.TCheck.Muda2.value = document.TCheck.Muda2.value.toUpperCase()    
+        document.TCheck.Muda3.value = document.TCheck.Muda3.value.toUpperCase()         
+        lert("Muda1: " + document.TCheck.Muda1.value + " (" + document.TCheck.Muda1.value.length + " chars)\n" +
+          "Muda2: " + document.TCheck.Muda2.value + " (" + document.TCheck.Muda2.value.length + " chars)\n" +
+          "Muda3: " + document.TCheck.Muda3.value + " (" + document.TCheck.Muda3.value.length + " chars)");
+        document.TCheck.Opt1.checked = false 
+    } 
+    function AltMinusc () { 
+       document.TCheck.Muda1.value = document.TCheck.Muda1.value.toLowerCase()    
+       document.TCheck.Muda2.value = document.TCheck.Muda2.value.toLowerCase() 
+       document.TCheck.Muda3.value = document.TCheck.Muda3.value.toLowerCase() 
+       lert("Muda1: " + document.TCheck.Muda1.value + " (" + document.TCheck.Muda1.value.length + " chars)\n" +
+          "Muda2: " + document.TCheck.Muda2.value + " (" + document.TCheck.Muda2.value.length + " chars)\n" +
+          "Muda3: " + document.TCheck.Muda3.value + " (" + document.TCheck.Muda3.value.length + " chars)");
+       document.TCheck.Opt2.checked = false 
+    } 
+    </SCRIPT> 
+    
+    <p> 
+    <form name="TCheck"> 
+    Muda 1 <input type=text size=20 maxlength=20 name="Muda1"> </p> 
+
+    Muda 2 <input type=text size=20 maxlength=20 name="Muda2"> </p> 
+
+    Muda 3 <input type=text size=20 maxlength=20 name="Muda3"> </p> 
+    <p> 
+    Minusculo<input type=checkbox name="Opt1" value="1" checked 
+                      onclick="if (this.checked) 
+                                       { AltMinusc() } "> 
+    Maiusculo<input type=checkbox name="Opt2" value="2" 
+                      onclick="if (this.checked) 
+                                       { AltMaiusc() } "> 
+    Demo valor<input type=checkbox name="Opt3" 
+                        onclick="if (Opt3.checked) 
+                                         {alert ('Server recebera = ' + Opt3.value) } "> 
+    </p> 
+    </form> 
+
+<!--2- Crie um formulário com 4 campos, sendo todos obrigatórios. Na submissão, verificar se os dados obrigatórios foram informados, 
+mostre o Erro ocorrido ou 'Sucesso' através de janela alert. Ver exemplo 10. -->
+<script> 
+    function TestaVal() { 
+        let form = document.TesteSub;
+        let erros = [];
+    
+        if (form.Campo1.value.trim() === "") erros.push("Campo 1");
+        if (form.Campo2.value.trim() === "") erros.push("Campo 2");
+        if (form.Campo3.value.trim() === "") erros.push("Campo 3");
+        if (form.Campo4.value.trim() === "") erros.push("Campo 4");
+    
+        if (erros.length > 0) {
+            alert("Erro: os seguintes campos não foram preenchidos:\n" + erros.join(", "));
+            return false;
+        } else {
+            alert("Tudo Ok... Formulário submetido!");
+            return true;
+        }
+    }
+    </script> 
+    
+    <form method="POST" name="TesteSub" onsubmit="return TestaVal()" action="teste.html"> 
+        <p>Campo 1: <input type="text" name="Campo1" maxlength="20"></p>
+        <p>Campo 2: <input type="text" name="Campo2" maxlength="20"></p>
+        <p>Campo 3: <input type="text" name="Campo3" maxlength="20"></p>
+        <p>Campo 4: <input type="text" name="Campo4" maxlength="20"></p>
+        <p><input type="submit" value="Manda p/Server"></p>
+    </form> 
+<!--3- Ler o nome do usuário (via prompt) e imprimir a mensagem:
+"Bom dia, boa tarde ou boa noite (de acordo com o horário atual), NOME INFORMADO, hoje é: dia da semana, dia/mês/ano.". -->
+
+<script>
+    function nome_mensagem() {
+        let nome = prompt("Digite seu nome:");
+
+        let agora = new Date();
+        let hora = agora.getHours();
+        let dia = agora.getDate();
+        let mes = agora.getMonth() + 1; 
+        let ano = agora.getFullYear();
+
+        let dias_semana = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+        let dia_semana = dias_semana[agora.getDay()];
+
+        
+        let horario_dia = "";
+        if (hora >= 0 && hora < 12) {
+            horario_dia = "Bom dia";
+        } else if (hora >= 12 && hora < 18) {
+            horario_dia = "Boa tarde";
+        } else {
+            horario_dia = "Boa noite";
+        }
+    
+        alert(`${horario_dia}, ${nome}, hoje é: ${dia_semana}, ${dia}/${mes}/${ano}.`);
+    }
+    nome_mensagem();
+
+    </script>
+    
+    <!-- 4-->
+    <h1>Confirme sua presença no evento</h1>
+
+    <p>Nome: <input type="text" id="nome" placeholder="Digite seu nome"></p>
+
+    <p>Você irá ao evento?
+        <select id="presenca">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    </p>
+
+    <button onclick="confirmar()">Confirmar</button>
+
+    <div id="mensagem"></div>
+
+    <script>
+        function confirmar() {
+            const nome = document.getElementById("nome").value.trim();
+            const presenca = document.getElementById("presenca").value;
+
+            const mensagem = document.getElementById("mensagem");
+
+            if (nome === "") {
+                mensagem.style.color = "red";
+                mensagem.innerText = "Por favor, digite seu nome.";
+                return;
+            }
+
+            if (presenca === "sim") {
+                mensagem.style.color = "green";
+                mensagem.innerText = `Obrigado, ${nome}! Sua presença foi confirmada.`;
+            } else {
+                mensagem.style.color = "gray";
+                mensagem.innerText = `Entendido, ${nome}. Sentiremos sua falta!`;
+            }
+        }
+    </script>
+    

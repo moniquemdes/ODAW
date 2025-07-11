@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<body bgcolor="black" text="white"></body>
+
+<div style="margin-left: 5cm;">
+
+    <h1><font face="times" size="10">ENLIC</h1></font>
+
+    <section>
+    <h3>Programação IV Encontro das Licenciaturas da Região Sul</h3>
+    <p>É um evento regional bem amplo que pretende conectar educadores de diferentes 
+    níveis de ensino do sul do país e fortalecer o compromisso com a escola pública e a formação de qualidade.</p>
+    </section>
+
+    <section>
+    <!-- lista de definição com os palestrantes -->
+    <h3>Palestrantes Confirmados</h3>
+    <dl>
+      <dt>Prof. Dr. João Silva</dt> <!--  dt - define o termo (nome do item) -->
+      <dd>Especialista em inovação educacional</dd> <!-- dd → define a descricao ou explicacao do termo.-->
+    
+      <dt>Profa. Dra. Maria Souza</dt>
+      <dd>Pesquisadora em metodologias ativas</dd>
+    
+      <dt>Prof. Dr. Carlos Oliveira</dt>
+      <dd>Consultor em tecnologia educacional</dd>
+    </dl>
+    </section>
+    
+    <h2>Programação</h2>
+
+        <!-- tabela  -->
+
+    <table border="1">
+        <tr>
+            <th>Horário</th>
+            <th>Atividade</th>
+            <th>Palestrante</th>
+        </tr>
+        <tr>
+            <td>08:00 - 09:00</td>
+            <td valign= middle >Abertura Oficial</td>
+            <td>Prof. Dr. Carlos Oliveira</td>
+            
+        </tr>
+        <tr>
+            <td>09:00 - 10:30</td>
+            <td>Mesa-redonda: Educação e Tecnologia</td>
+            <td>Prof. Dr. João Silva</td>
+        </tr>
+        <tr>
+            <td rowspan="2">11:00 - 13:00</td>
+            <td>Palestra: Metodologias Ativas</td>
+            <td>Profa. Dra. Maria Souza</td>
+        </tr>
+        <tr>
+            <td>Debate e perguntas</td>
+            <td>Todos os palestrantes</td>
+        </tr>
+    </table>
+    <br>
+    
+    <section>
+        <h1>Inscrições</h1> <br>
+            <form action="inscricao.php" method="POST">
+                <!-- Nome Completo -->
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required> <br><br>
+                <!-- required : atributo precisam que sejam preenchido para enviar formulário-->
+            
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <br><br>
+
+                <!-- Telefone -->
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="Apenas números"> <br><br>
+                <!-- atributo de apenas números-->
+
+                <!-- Data de Nascimento -->
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento"> <br><br>
+
+                <!-- Seleção de Palestras -->
+                <label for="palestra">Escolha sua palestra:</label>
+                <select id="palestra" name="palestra">
+                    <option value="mesa_redonda">Mesa-redonda: Educação e Tecnologia</option>
+                    <option value="metodologias">Palestra: Metodologias Ativas</option>
+                    <option value="debate">Debate e Perguntas</option>
+                </select> <br><br>
+
+                <!-- Checkbox para confirmação -->
+                <label><input type="checkbox" name="newsletter" checked> Quero receber novidades por email</label> <br><br>
+
+                <!-- Radio para escolher tipo de participante -->
+                <label>Você é:</label> <br>
+                <input type="radio" id="estudante" name="tipo" value="estudante">
+                <label for="estudante">Estudante</label><br>
+                <input type="radio" id="professor" name="tipo" value="professor">
+                <label for="professor">Professor</label><br>
+                <input type="radio" id="outro" name="tipo" value="outro">
+                <label for="outro">Outro</label><br><br>
+
+                <!-- Campo para envio de arquivo (ex: comprovante de matrícula) -->
+                <label for="arquivo">Envie um comprovante de vínculo acadêmico (opcional):</label>
+                <input type="file" id="arquivo" name="arquivo"> <br><br>
+
+                <!-- Campo de comentário -->
+                <label for="comentarios">Comentários ou dúvidas:</label> <br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea> <br><br>
+
+                <!-- Botões -->
+                <input type="submit" value="Enviar Inscrição">
+                <input type="reset" value="Limpar Formulário">
+            </form>
+        </section>
+
+    
+        
+        <a href="site1.html"><i><u>Voltar para a página principal</u></i></a>
+        
+        
+    </div>
+</body>
+</html>    

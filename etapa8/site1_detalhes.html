@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IV ENLIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="bg-dark text-white">
+    
+
+<div class="container my-5">
+    <h1 class="text-center display-1 mb-5">ENLIC</h1>
+
+    <section class="mb-5">
+        <h3>Programação IV Encontro das Licenciaturas da Região Sul</h3>
+        <p>
+            É um evento regional bem amplo que pretende conectar educadores de diferentes níveis de ensino do sul do país
+            e fortalecer o compromisso com a escola pública e a formação de qualidade.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h3>Palestrantes Confirmados</h3>
+        <dl class="row">
+            <dt class="col-sm-4">Prof. Dr. João Silva</dt>
+            <dd class="col-sm-8">Especialista em inovação educacional</dd>
+
+            <dt class="col-sm-4">Profa. Dra. Maria Souza</dt>
+            <dd class="col-sm-8">Pesquisadora em metodologias ativas</dd>
+
+            <dt class="col-sm-4">Prof. Dr. Carlos Oliveira</dt>
+            <dd class="col-sm-8">Consultor em tecnologia educacional</dd>
+        </dl>
+    </section>
+
+    <section class="mb-5">
+        <h2>Programação</h2>
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Atividade</th>
+                    <th>Palestrante</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:00</td>
+                    <td>Abertura Oficial</td>
+                    <td>Prof. Dr. Carlos Oliveira</td>
+                </tr>
+                <tr>
+                    <td>09:00 - 10:30</td>
+                    <td>Mesa-redonda: Educação e Tecnologia</td>
+                    <td>Prof. Dr. João Silva</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">11:00 - 13:00</td>
+                    <td>Palestra: Metodologias Ativas</td>
+                    <td>Profa. Dra. Maria Souza</td>
+                </tr>
+                <tr>
+                    <td>Debate e perguntas</td>
+                    <td>Todos os palestrantes</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="mb-5">
+        <h2>Inscrições</h2>
+        <form action="inscricao.php" method="POST">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="Apenas números">
+            </div>
+
+            <div class="mb-3">
+                <label for="nascimento" class="form-label">Data de Nascimento:</label>
+                <input type="date" class="form-control" id="nascimento" name="nascimento">
+            </div>
+
+            <div class="mb-3">
+                <label for="palestra" class="form-label">Escolha sua palestra:</label>
+                <select class="form-select" id="palestra" name="palestra">
+                    <option value="mesa_redonda">Mesa-redonda: Educação e Tecnologia</option>
+                    <option value="metodologias">Palestra: Metodologias Ativas</option>
+                    <option value="debate">Debate e Perguntas</option>
+                </select>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter" checked>
+                <label class="form-check-label" for="newsletter">Quero receber novidades por email</label>
+            </div>
+
+            <fieldset class="mb-3">
+                <legend>Você é:</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="estudante" name="tipo" value="estudante">
+                    <label class="form-check-label" for="estudante">Estudante</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="professor" name="tipo" value="professor">
+                    <label class="form-check-label" for="professor">Professor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="outro" name="tipo" value="outro">
+                    <label class="form-check-label" for="outro">Outro</label>
+                </div>
+            </fieldset>
+
+            <div class="mb-3">
+                <label for="arquivo" class="form-label">Envie um comprovante de vínculo acadêmico (opcional):</label>
+                <input class="form-control" type="file" id="arquivo" name="arquivo">
+            </div>
+
+            <div class="mb-3">
+                <label for="comentarios" class="form-label">Comentários ou dúvidas:</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar Inscrição</button>
+            <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+        </form>
+    </section>
+
+    <a href="site1.html" class="text-info">Voltar para a página principal</a>
+</div>
+<script src="exerci8.js"></script>
+</body>
+</html>

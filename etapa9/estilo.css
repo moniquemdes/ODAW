@@ -1,0 +1,26 @@
+
+body {
+    background-color: #121212; /* fundo e texto */
+    color: #ffffff;
+}
+
+.titulo-destaque {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: none;
+    color: white;
+}
+
+a.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+a.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
