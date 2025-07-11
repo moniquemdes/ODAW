@@ -36,8 +36,9 @@ Este repositório contém os exercícios desenvolvidos ao longo da disciplina **
 - Validação de campos obrigatórios e feedback com `alert`.
 - Saudação personalizada baseada no horário atual.
 - Exemplos livres com uso de JS interno, externo e inline.
+> ⚠️ Obs: esta etapa **não foi baseada no projeto do site de eventos**.
 
-### ⚙️ Etapa 8 – JavaScript aplicado ao site
+### ⚙️ Etapa 8 – JavaScript
 - Integração de funcionalidades JS no projeto.
 - Validações de formulário (ex: e-mail, data, senha).
 - Manipulação de strings, datas e eventos.
@@ -48,8 +49,9 @@ Este repositório contém os exercícios desenvolvidos ao longo da disciplina **
 - Uso de funções e manipulação de arrays/strings.
 - Contador de visitas com arquivo `.txt`.
 - Implementação de cookies e sessões.
-
-### 🔐 Etapa 10 – PHP com Formulários
+> ⚠️ Obs: esta etapa **não foi baseada no projeto do site de eventos**.
+> 
+### 🔐 Etapa 10 – PHP 
 - Formulário completo com múltiplos tipos de campos.
 - Validação de preenchimento e conteúdo com PHP.
 - Confirmação de envio ao usuário.
@@ -61,6 +63,7 @@ Este repositório contém os exercícios desenvolvidos ao longo da disciplina **
 - Inserção, visualização, alteração e exclusão de dados.
 - Remoção de tabela e base.
 - Registro dos comandos em arquivo `.sql`.
+> ⚠️ Obs: esta etapa **não foi baseada no projeto do site de eventos**.
 
 ### 🔄 Etapa 12 – Sistema Completo: PHP + MySQL
 - Sistema de **cadastro completo** com:
